@@ -1,0 +1,15 @@
+PROBLEM NAME: Truss 2D
+
+DISCRETIZATION
+Mesh Input File: \Users\marioju\Documentos\Work\estatica.msh
+Output Filename: \\Client\C$\Users\marioju\Documentos\Work\
+Dirichlet BCs: 3
+0.0 1.5 X 0.0
+0.0 1.5 X 0.0
+0.0 0.0 X 0.0
+Point Force: 1
+2.0 1.5 Y -3000
+
+MATERIAL PROPERTIES 1
+Elastic modulus: 200e9
+Area: 0.1
