@@ -14,12 +14,31 @@ end
 % get mesh input file
 tline = fgetl(fileID);
 tmp = strsplit(tline);
-mshfile = tmp{4};
+len = length(tmp); 
+if len > 4
+    % concatenate name
+    for i=4:len-1
+        mshfile = tmp{i};
+        s1 = tmp{i+1};
+        mshfile = strcat(mshfile,{' '},s1);
+    end
+else
+   mshfile = tmp{4}; 
+end
 % get output file location
 tline = fgetl(fileID);
 tmp = strsplit(tline);
-outfile = tmp{3};
-
+len = length(tmp); 
+if len > 3
+    % concatenate name
+    for i=3:len-1
+        outfile = tmp{i};
+        s1 = tmp{i+1};
+        outfile = strcat(outfile,{' '},s1);
+    end
+else
+   outfile = tmp{3}; 
+end
 % read Dirichlet BCs
 tline = fgetl(fileID);
 tmp = strsplit(tline);
